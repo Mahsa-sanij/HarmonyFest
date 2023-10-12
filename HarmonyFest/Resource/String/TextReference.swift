@@ -9,6 +9,6 @@ import Foundation
 
 struct TextReferences {
     
-    
+    static let title = "title".localized
 }
 

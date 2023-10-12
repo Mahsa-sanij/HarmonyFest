@@ -23,6 +23,9 @@
 		1975DE7F2AD8411D0024C3DC /* ColorReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE7E2AD8411D0024C3DC /* ColorReference.swift */; };
 		1975DE812AD8412A0024C3DC /* ColorAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1975DE802AD8412A0024C3DC /* ColorAsset.xcassets */; };
 		1975DE882AD844C60024C3DC /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1975DE8A2AD844C60024C3DC /* Base.strings */; };
+		1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE8D2AD8517D0024C3DC /* MasterView.swift */; };
+		1975DE902AD85A400024C3DC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE8F2AD85A400024C3DC /* Artist.swift */; };
+		1975DE932AD864410024C3DC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE922AD864410024C3DC /* String.swift */; };
 		300EBDAA7F1EC978464E2B2A /* Pods_HarmonyFest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9651471475BAEC25EB8BB921 /* Pods_HarmonyFest.framework */; };
 		52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9782E440A0FF12ADC4E9F03D /* Pods_HarmonyFest_HarmonyFestUITests.framework */; };
 		D0C0C171A649307C89AF4394 /* Pods_HarmonyFestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61C15FAA5164C64700521B /* Pods_HarmonyFestTests.framework */; };
@@ -67,6 +70,9 @@
 		1975DE852AD842A70024C3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1975DE892AD844C60024C3DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		1975DE8C2AD845710024C3DC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Base.strings; sourceTree = "<group>"; };
+		1975DE8D2AD8517D0024C3DC /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		1975DE8F2AD85A400024C3DC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		1975DE922AD864410024C3DC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6F6542611EA9A824FCFF591E /* Pods-HarmonyFestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.release.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.release.xcconfig"; sourceTree = "<group>"; };
 		783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8177C169E758B0C5CDE31E61 /* Pods-HarmonyFestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				1975DE852AD842A70024C3DC /* Info.plist */,
+				1975DE912AD864340024C3DC /* Extension */,
 				1975DE6A2AD83BFC0024C3DC /* Network */,
 				1975DE652AD83AC50024C3DC /* App */,
 				1975DE642AD83AB60024C3DC /* Model */,
@@ -181,6 +188,7 @@
 		1975DE622AD83A940024C3DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1975DE8D2AD8517D0024C3DC /* MasterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 		1975DE642AD83AB60024C3DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1975DE8F2AD85A400024C3DC /* Artist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +253,14 @@
 				1975DE802AD8412A0024C3DC /* ColorAsset.xcassets */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		1975DE912AD864340024C3DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE922AD864410024C3DC /* String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A1430FCB50CC4529522C149E /* Pods */ = {
@@ -512,12 +529,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1975DE7D2AD8410D0024C3DC /* LanguageUtil.swift in Sources */,
+				1975DE932AD864410024C3DC /* String.swift in Sources */,
 				1975DE6E2AD83C860024C3DC /* EndPoint.swift in Sources */,
 				1975DE6C2AD83C0C0024C3DC /* JsonClient.swift in Sources */,
+				1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */,
 				1975DE7B2AD841020024C3DC /* TextReference.swift in Sources */,
 				1975DE702AD83D450024C3DC /* Result.swift in Sources */,
 				1975DE7F2AD8411D0024C3DC /* ColorReference.swift in Sources */,
 				1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */,
+				1975DE902AD85A400024C3DC /* Artist.swift in Sources */,
 				1975DE772AD840D00024C3DC /* ImageReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

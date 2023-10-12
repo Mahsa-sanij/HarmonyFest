@@ -8,7 +8,13 @@
 import SwiftUI
 
 enum ColorReference: String {
-    case textColor      = "textColor"
+    
+    case dakBlue    = "dark_blue"
+    case lightBlue  = "light_blue"
+    case orange     = "orange"
+    case primary    = "primary"
+    case white      = "white"
+    case red        =  "red"
 }
 
 extension ColorReference {
