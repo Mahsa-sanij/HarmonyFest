@@ -7,15 +7,21 @@
 
 import Foundation
 
-struct Artist : Codable {
+class Artist : Entity {
     
-    var id: Int?
-    var name: String?
     var genre: String?
     
-    var image: URL? {
+    override var image: URL? {
         let url = String(format: "https://songleap.s3.amazonaws.com/artists/%@.png", name?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")
-        print(url)
         return URL(string: url)
+    }
+    
+    init(id: Int? = nil, name: String? = nil, genre: String?) {
+        super.init(id: id, name: name)
+        self.genre = genre
+    }
+    
+    required init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
     }
 }

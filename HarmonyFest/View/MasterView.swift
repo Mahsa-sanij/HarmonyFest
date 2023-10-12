@@ -23,6 +23,10 @@ struct MasterView: View {
         UITableViewCell.appearance().backgroundColor = .clear
         UITableView.appearance().backgroundColor = .clear
         
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        
     }
     
     var body: some View {
@@ -44,10 +48,13 @@ struct MasterView: View {
                     .pickerStyle(.segmented)
                     
                     
-                    List([1,2,3,4,5,6] , id: \.self) { item in
+                    List([Artist(id:1 , name: "Vomit Spots", genre: "Punk"),Artist(id:2 , name: "Vomit Spots", genre: "Punk"),Artist(id:3 , name: "Vomit Spots", genre: "Punk"),Artist(id:4 , name: "Vomit Spots", genre: "Punk"),Artist(id:5 , name: "Vomit Spots", genre: "Punk"),Artist(id:6 , name: "Vomit Spots", genre: "Punk")] , id: \.id) { item in
                         
-                        ArtistItemView(item: .init(id:1 , name: "Vomit Spots", genre: "Punk"))
-                            .listRowBackground(Color.clear)
+                        NavigationLink(destination: DetailView(item: item)) {
+                            
+                            ArtistItemView(item: item)
+                                .listRowBackground(Color.clear)
+                        }
                         
                     }
                     .scrollContentBackground(.hidden)
@@ -93,11 +100,9 @@ struct ArtistItemView : View {
             VStack(alignment: .leading, spacing: 8) {
                 
                 Text(item.name ?? "")
-                    .foregroundColor(ColorReference.primary.color)
                     .font(Font.system(size: 18, weight: .medium, design: .default))
                 
                 Text(item.genre ?? "")
-                    .foregroundColor(ColorReference.primary.color)
                     .font(Font.system(size: 16, weight: .regular, design: .default))
                 
             }
@@ -107,8 +112,6 @@ struct ArtistItemView : View {
             
         }
         .padding(.all, 8)
-        .background(RoundedRectangle(cornerRadius: 8, style: .circular)
-            .foregroundColor(ColorReference.lightBlue.color))
     }
     
 }

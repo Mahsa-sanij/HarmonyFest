@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7A42AD831A800A4969D /* HarmonyFestApp.swift */; };
 		1937F7A92AD831AB00A4969D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1937F7A82AD831AB00A4969D /* Assets.xcassets */; };
-		1937F7AC2AD831AB00A4969D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1937F7AB2AD831AB00A4969D /* Preview Assets.xcassets */; };
 		1937F7B62AD831AB00A4969D /* HarmonyFestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7B52AD831AB00A4969D /* HarmonyFestTests.swift */; };
 		1937F7C02AD831AB00A4969D /* HarmonyFestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7BF2AD831AB00A4969D /* HarmonyFestUITests.swift */; };
 		1937F7C22AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7C12AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift */; };
@@ -26,6 +25,11 @@
 		1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE8D2AD8517D0024C3DC /* MasterView.swift */; };
 		1975DE902AD85A400024C3DC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE8F2AD85A400024C3DC /* Artist.swift */; };
 		1975DE932AD864410024C3DC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE922AD864410024C3DC /* String.swift */; };
+		1975DE952AD864B70024C3DC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE942AD864B70024C3DC /* DetailView.swift */; };
+		1975DE992AD86C2C0024C3DC /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE982AD86C2C0024C3DC /* RoundedCornerView.swift */; };
+		1975DE9B2AD86EC40024C3DC /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9A2AD86EC40024C3DC /* Performance.swift */; };
+		1975DE9D2AD86F400024C3DC /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9C2AD86F400024C3DC /* Entity.swift */; };
+		1975DE9F2AD86FF00024C3DC /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9E2AD86FF00024C3DC /* Venue.swift */; };
 		300EBDAA7F1EC978464E2B2A /* Pods_HarmonyFest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9651471475BAEC25EB8BB921 /* Pods_HarmonyFest.framework */; };
 		52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9782E440A0FF12ADC4E9F03D /* Pods_HarmonyFest_HarmonyFestUITests.framework */; };
 		D0C0C171A649307C89AF4394 /* Pods_HarmonyFestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61C15FAA5164C64700521B /* Pods_HarmonyFestTests.framework */; };
@@ -52,7 +56,6 @@
 		1937F7A12AD831A800A4969D /* HarmonyFest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarmonyFest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1937F7A42AD831A800A4969D /* HarmonyFestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestApp.swift; sourceTree = "<group>"; };
 		1937F7A82AD831AB00A4969D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1937F7AB2AD831AB00A4969D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1937F7B12AD831AB00A4969D /* HarmonyFestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonyFestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1937F7B52AD831AB00A4969D /* HarmonyFestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestTests.swift; sourceTree = "<group>"; };
 		1937F7BB2AD831AB00A4969D /* HarmonyFestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonyFestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,12 +70,17 @@
 		1975DE7C2AD8410D0024C3DC /* LanguageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageUtil.swift; sourceTree = "<group>"; };
 		1975DE7E2AD8411D0024C3DC /* ColorReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorReference.swift; sourceTree = "<group>"; };
 		1975DE802AD8412A0024C3DC /* ColorAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAsset.xcassets; sourceTree = "<group>"; };
-		1975DE852AD842A70024C3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1975DE852AD842A70024C3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1975DE892AD844C60024C3DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		1975DE8C2AD845710024C3DC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Base.strings; sourceTree = "<group>"; };
 		1975DE8D2AD8517D0024C3DC /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		1975DE8F2AD85A400024C3DC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		1975DE922AD864410024C3DC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1975DE942AD864B70024C3DC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1975DE982AD86C2C0024C3DC /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		1975DE9A2AD86EC40024C3DC /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
+		1975DE9C2AD86F400024C3DC /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		1975DE9E2AD86FF00024C3DC /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		6F6542611EA9A824FCFF591E /* Pods-HarmonyFestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.release.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.release.xcconfig"; sourceTree = "<group>"; };
 		783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8177C169E758B0C5CDE31E61 /* Pods-HarmonyFestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,24 +146,15 @@
 			isa = PBXGroup;
 			children = (
 				1975DE852AD842A70024C3DC /* Info.plist */,
-				1975DE912AD864340024C3DC /* Extension */,
+				1975DE962AD86C0D0024C3DC /* Utilities */,
 				1975DE6A2AD83BFC0024C3DC /* Network */,
 				1975DE652AD83AC50024C3DC /* App */,
 				1975DE642AD83AB60024C3DC /* Model */,
 				1975DE632AD83A9F0024C3DC /* ViewModel */,
 				1975DE622AD83A940024C3DC /* View */,
 				1975DE612AD83A840024C3DC /* Resource */,
-				1937F7AA2AD831AB00A4969D /* Preview Content */,
 			);
 			path = HarmonyFest;
-			sourceTree = "<group>";
-		};
-		1937F7AA2AD831AB00A4969D /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1937F7AB2AD831AB00A4969D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		1937F7B42AD831AB00A4969D /* HarmonyFestTests */ = {
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				1975DE8D2AD8517D0024C3DC /* MasterView.swift */,
+				1975DE942AD864B70024C3DC /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,7 +203,10 @@
 		1975DE642AD83AB60024C3DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1975DE9C2AD86F400024C3DC /* Entity.swift */,
 				1975DE8F2AD85A400024C3DC /* Artist.swift */,
+				1975DE9E2AD86FF00024C3DC /* Venue.swift */,
+				1975DE9A2AD86EC40024C3DC /* Performance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +264,23 @@
 				1975DE922AD864410024C3DC /* String.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1975DE962AD86C0D0024C3DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE972AD86C180024C3DC /* CustomView */,
+				1975DE912AD864340024C3DC /* Extension */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1975DE972AD86C180024C3DC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE982AD86C2C0024C3DC /* RoundedCornerView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		A1430FCB50CC4529522C149E /* Pods */ = {
@@ -396,7 +416,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1937F7AC2AD831AB00A4969D /* Preview Assets.xcassets in Resources */,
 				1975DE812AD8412A0024C3DC /* ColorAsset.xcassets in Resources */,
 				1975DE882AD844C60024C3DC /* Base.strings in Resources */,
 				1937F7A92AD831AB00A4969D /* Assets.xcassets in Resources */,
@@ -529,13 +548,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1975DE7D2AD8410D0024C3DC /* LanguageUtil.swift in Sources */,
+				1975DE952AD864B70024C3DC /* DetailView.swift in Sources */,
+				1975DE9B2AD86EC40024C3DC /* Performance.swift in Sources */,
 				1975DE932AD864410024C3DC /* String.swift in Sources */,
 				1975DE6E2AD83C860024C3DC /* EndPoint.swift in Sources */,
 				1975DE6C2AD83C0C0024C3DC /* JsonClient.swift in Sources */,
+				1975DE992AD86C2C0024C3DC /* RoundedCornerView.swift in Sources */,
 				1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */,
 				1975DE7B2AD841020024C3DC /* TextReference.swift in Sources */,
+				1975DE9F2AD86FF00024C3DC /* Venue.swift in Sources */,
 				1975DE702AD83D450024C3DC /* Result.swift in Sources */,
 				1975DE7F2AD8411D0024C3DC /* ColorReference.swift in Sources */,
+				1975DE9D2AD86F400024C3DC /* Entity.swift in Sources */,
 				1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */,
 				1975DE902AD85A400024C3DC /* Artist.swift in Sources */,
 				1975DE772AD840D00024C3DC /* ImageReference.swift in Sources */,
