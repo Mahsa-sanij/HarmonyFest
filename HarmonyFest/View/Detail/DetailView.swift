@@ -10,7 +10,22 @@ import struct Kingfisher.KFImage
 
 struct DetailView: View {
     
-    let item: Entity
+    @ObservedObject var vm = DetailViewModel()
+    
+    let artistItem: Artist?
+    let venueItem: Venue?
+    
+    init(artistItem: Artist) {
+        self.venueItem = nil
+        self.artistItem = artistItem
+        self.vm.getPerformances(artistId: artistItem.id ?? 0)
+    }
+    
+    init(venueItem: Venue) {
+        self.artistItem = nil
+        self.venueItem = venueItem
+        self.vm.getPerformances(venueId: venueItem.id ?? 0)
+    }
     
     var body: some View {
         
@@ -24,7 +39,7 @@ struct DetailView: View {
                     
                     ZStack(alignment: .bottom) {
                         
-                        KFImage(item.image)
+                        KFImage((artistItem != nil ? artistItem : venueItem)?.image)
                             .resizable()
                             .aspectRatio(CGSize(width: 352, height: 208), contentMode: .fit)
                             .overlay(RoundedCornerView(strokeColor: ColorReference.orange.color, strokeSize: 1, tl: 0, tr: 8, bl: 0, br: 8))
@@ -34,7 +49,7 @@ struct DetailView: View {
                     .padding(.trailing, 24)
                     .padding(.bottom, 20)
                     
-                    PerformanceListView(performances: [.init(id: 1, date: "2023-01-01T20:00:00", entity: Artist(id: 4, name: "Shake The Disease", genre: "Synthpop")), .init(id: 2, date: "2023-01-01T20:00:00", entity: Artist(id: 4, name: "Shake The Disease", genre: "Synthpop")), .init(id: 3, date: "2023-01-01T20:00:00", entity: Artist(id: 4, name: "Shake The Disease", genre: "Synthpop")), .init(id: 4, date: "2023-01-01T20:00:00", entity: Artist(id: 4, name: "Shake The Disease", genre: "Synthpop")), .init(id: 5, date: "2023-01-01T20:00:00", entity: Artist(id: 4, name: "Shake The Disease", genre: "Synthpop"))])
+                    PerformanceListView(performances: vm.performanceList ?? [])
                         .padding(.horizontal, 24)
                         .padding(.bottom, 32)
                     
@@ -42,7 +57,7 @@ struct DetailView: View {
                 .padding(.top, 20)
                 
             }
-            .navigationBarTitle(item.name ?? "", displayMode: .large)
+            .navigationBarTitle((artistItem != nil ? artistItem : venueItem)?.name ?? "", displayMode: .large)
             
         }
         
@@ -85,10 +100,10 @@ struct PerformanceListView : View {
                 
                 ZStack {
                     
-                    KFImage(item.entity?.image)
+                    KFImage((item.artist != nil ? item.artist : item.venue)?.image)
                         .resizable()
                         .aspectRatio(CGSize(width: 320, height: 150), contentMode: .fit)
-                    
+
                     VStack {
                         
                         Spacer()
@@ -96,15 +111,15 @@ struct PerformanceListView : View {
                         VStack(spacing: 4) {
                             
                             HStack {
-                                Text(item.entity?.name ?? "")
+                                Text((item.artist != nil ? item.artist : item.venue)?.name ?? "")
                                     .font(Font.system(size: 22, weight: .bold, design: .default))
                                 
                                 
-                                if item.entity is Artist {
+                                if item.artist != nil {
                                     
                                     Spacer()
                                     
-                                    Text((item.entity as? Artist)?.genre ?? "")
+                                    Text(item.artist?.genre ?? "")
                                         .font(Font.system(size: 16, weight: .regular, design: .default))
                                 }
                             }
@@ -126,7 +141,7 @@ struct PerformanceListView : View {
                     }
                     
                 }
-                .cornerRadius(8)
+                .overlay(RoundedCornerView(strokeColor: ColorReference.orange.color, strokeSize: 1, tl: 8, tr: 8, bl: 8, br: 8))
                 .padding(.vertical, 8)
                 
             }

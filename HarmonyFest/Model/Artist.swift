@@ -16,12 +16,4 @@ class Artist : Entity {
         return URL(string: url)
     }
     
-    init(id: Int? = nil, name: String? = nil, genre: String?) {
-        super.init(id: id, name: name)
-        self.genre = genre
-    }
-    
-    required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
-    }
 }

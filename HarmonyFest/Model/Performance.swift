@@ -12,7 +12,8 @@ struct Performance : Codable {
     var id: Int?
     var date: String?
     var genre: String?
-    var entity: Entity?
+    var artist: Artist?
+    var venue: Venue?
     
     func getFormattedDate() -> String {
         

@@ -30,6 +30,10 @@
 		1975DE9B2AD86EC40024C3DC /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9A2AD86EC40024C3DC /* Performance.swift */; };
 		1975DE9D2AD86F400024C3DC /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9C2AD86F400024C3DC /* Entity.swift */; };
 		1975DE9F2AD86FF00024C3DC /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE9E2AD86FF00024C3DC /* Venue.swift */; };
+		1975DEA22AD891910024C3DC /* HarmonyFestEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA12AD891910024C3DC /* HarmonyFestEndPoint.swift */; };
+		1975DEA42AD893E70024C3DC /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA32AD893E70024C3DC /* MasterViewModel.swift */; };
+		1975DEA62AD8AA8A0024C3DC /* MasterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */; };
+		1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */; };
 		300EBDAA7F1EC978464E2B2A /* Pods_HarmonyFest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9651471475BAEC25EB8BB921 /* Pods_HarmonyFest.framework */; };
 		52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9782E440A0FF12ADC4E9F03D /* Pods_HarmonyFest_HarmonyFestUITests.framework */; };
 		D0C0C171A649307C89AF4394 /* Pods_HarmonyFestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61C15FAA5164C64700521B /* Pods_HarmonyFestTests.framework */; };
@@ -81,6 +85,10 @@
 		1975DE9A2AD86EC40024C3DC /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		1975DE9C2AD86F400024C3DC /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		1975DE9E2AD86FF00024C3DC /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		1975DEA12AD891910024C3DC /* HarmonyFestEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestEndPoint.swift; sourceTree = "<group>"; };
+		1975DEA32AD893E70024C3DC /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
+		1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterItemView.swift; sourceTree = "<group>"; };
+		1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		6F6542611EA9A824FCFF591E /* Pods-HarmonyFestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.release.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.release.xcconfig"; sourceTree = "<group>"; };
 		783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8177C169E758B0C5CDE31E61 /* Pods-HarmonyFestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,8 +195,8 @@
 		1975DE622AD83A940024C3DC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1975DE8D2AD8517D0024C3DC /* MasterView.swift */,
-				1975DE942AD864B70024C3DC /* DetailView.swift */,
+				1975DEA72AD8AAA50024C3DC /* Master */,
+				1975DEA82AD8AAB60024C3DC /* Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +204,8 @@
 		1975DE632AD83A9F0024C3DC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1975DEA32AD893E70024C3DC /* MasterViewModel.swift */,
+				1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -223,9 +233,8 @@
 		1975DE6A2AD83BFC0024C3DC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1975DE6B2AD83C0C0024C3DC /* JsonClient.swift */,
-				1975DE6D2AD83C860024C3DC /* EndPoint.swift */,
-				1975DE6F2AD83D450024C3DC /* Result.swift */,
+				1975DEA02AD891610024C3DC /* Base */,
+				1975DEA12AD891910024C3DC /* HarmonyFestEndPoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -281,6 +290,33 @@
 				1975DE982AD86C2C0024C3DC /* RoundedCornerView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		1975DEA02AD891610024C3DC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE6B2AD83C0C0024C3DC /* JsonClient.swift */,
+				1975DE6D2AD83C860024C3DC /* EndPoint.swift */,
+				1975DE6F2AD83D450024C3DC /* Result.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1975DEA72AD8AAA50024C3DC /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE8D2AD8517D0024C3DC /* MasterView.swift */,
+				1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		1975DEA82AD8AAB60024C3DC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1975DE942AD864B70024C3DC /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		A1430FCB50CC4529522C149E /* Pods */ = {
@@ -550,14 +586,18 @@
 				1975DE7D2AD8410D0024C3DC /* LanguageUtil.swift in Sources */,
 				1975DE952AD864B70024C3DC /* DetailView.swift in Sources */,
 				1975DE9B2AD86EC40024C3DC /* Performance.swift in Sources */,
+				1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */,
 				1975DE932AD864410024C3DC /* String.swift in Sources */,
 				1975DE6E2AD83C860024C3DC /* EndPoint.swift in Sources */,
 				1975DE6C2AD83C0C0024C3DC /* JsonClient.swift in Sources */,
+				1975DEA62AD8AA8A0024C3DC /* MasterItemView.swift in Sources */,
 				1975DE992AD86C2C0024C3DC /* RoundedCornerView.swift in Sources */,
 				1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */,
 				1975DE7B2AD841020024C3DC /* TextReference.swift in Sources */,
 				1975DE9F2AD86FF00024C3DC /* Venue.swift in Sources */,
+				1975DEA42AD893E70024C3DC /* MasterViewModel.swift in Sources */,
 				1975DE702AD83D450024C3DC /* Result.swift in Sources */,
+				1975DEA22AD891910024C3DC /* HarmonyFestEndPoint.swift in Sources */,
 				1975DE7F2AD8411D0024C3DC /* ColorReference.swift in Sources */,
 				1975DE9D2AD86F400024C3DC /* Entity.swift in Sources */,
 				1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */,
