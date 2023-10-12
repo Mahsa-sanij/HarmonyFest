@@ -1,0 +1,6 @@
+framework module Pods_HarmonyFest {
+  umbrella header "Pods-HarmonyFest-umbrella.h"
+
+  export *
+  module * { export * }
+}
