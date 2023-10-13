@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct HarmonyFestApp: App {
     
+    let networkClient = NetworkClient()
+    
     var body: some Scene {
         WindowGroup {
-            MasterView()
+            MasterView(networkClient: networkClient)
         }
     }
 }

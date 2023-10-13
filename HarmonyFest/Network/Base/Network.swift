@@ -9,9 +9,16 @@ import Foundation
 import Alamofire
 import Combine
 
-enum JSONClient {
+
+protocol NetworkProtocol {
     
-    static func makeAPICall<T : Decodable>(to endPoint: EndPoint, type: T.Type) -> AnyPublisher<Result<T> , Never> {
+    func makeAPICall<T : Decodable>(to endPoint: EndPoint, type: T.Type) -> AnyPublisher<Result<T> , Never>
+    
+}
+
+struct NetworkClient : NetworkProtocol {
+    
+    func makeAPICall<T>(to endPoint: EndPoint, type: T.Type) -> AnyPublisher<Result<T> , Never> {
         
         let url = URL(string: endPoint.url)!
         

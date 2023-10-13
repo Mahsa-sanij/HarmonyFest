@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7A42AD831A800A4969D /* HarmonyFestApp.swift */; };
 		1937F7A92AD831AB00A4969D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1937F7A82AD831AB00A4969D /* Assets.xcassets */; };
-		1937F7B62AD831AB00A4969D /* HarmonyFestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7B52AD831AB00A4969D /* HarmonyFestTests.swift */; };
-		1937F7C02AD831AB00A4969D /* HarmonyFestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7BF2AD831AB00A4969D /* HarmonyFestUITests.swift */; };
-		1937F7C22AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937F7C12AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift */; };
-		1975DE6C2AD83C0C0024C3DC /* JsonClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE6B2AD83C0C0024C3DC /* JsonClient.swift */; };
+		1975DE6C2AD83C0C0024C3DC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE6B2AD83C0C0024C3DC /* Network.swift */; };
 		1975DE6E2AD83C860024C3DC /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE6D2AD83C860024C3DC /* EndPoint.swift */; };
 		1975DE702AD83D450024C3DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DE6F2AD83D450024C3DC /* Result.swift */; };
 		1975DE752AD840C00024C3DC /* ImageAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1975DE742AD840C00024C3DC /* ImageAsset.xcassets */; };
@@ -35,20 +32,23 @@
 		1975DEA62AD8AA8A0024C3DC /* MasterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */; };
 		1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */; };
 		1975DEAC2AD8B1D30024C3DC /* PerformanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */; };
+		1975DEAE2AD9AEB60024C3DC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEAD2AD9AEB60024C3DC /* Array.swift */; };
+		1975DEB02AD9B5140024C3DC /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEAF2AD9B5140024C3DC /* CircularProgressView.swift */; };
+		1975DEB22AD9B5EC0024C3DC /* PerformanceListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEB12AD9B5EC0024C3DC /* PerformanceListItemView.swift */; };
+		1975DEB42AD9B8770024C3DC /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 1975DEB32AD9B8770024C3DC /* Readme.md */; };
+		1975DEB92AD9BA9A0024C3DC /* screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1975DEB62AD9BA9A0024C3DC /* screen1.png */; };
+		1975DEBA2AD9BA9A0024C3DC /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1975DEB72AD9BA9A0024C3DC /* screen2.png */; };
+		1975DEBB2AD9BA9A0024C3DC /* screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1975DEB82AD9BA9A0024C3DC /* screen3.png */; };
+		1975DEBE2AD9BC660024C3DC /* MasterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEBD2AD9BC660024C3DC /* MasterViewModelTests.swift */; };
+		1975DEC02AD9BEC20024C3DC /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEBF2AD9BEC20024C3DC /* DetailViewModelTests.swift */; };
+		1975DEC42AD9BFB50024C3DC /* ArtistMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEC32AD9BFB50024C3DC /* ArtistMock.swift */; };
+		1975DEC62AD9CB520024C3DC /* NetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEC52AD9CB520024C3DC /* NetworkClientMock.swift */; };
 		300EBDAA7F1EC978464E2B2A /* Pods_HarmonyFest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9651471475BAEC25EB8BB921 /* Pods_HarmonyFest.framework */; };
-		52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9782E440A0FF12ADC4E9F03D /* Pods_HarmonyFest_HarmonyFestUITests.framework */; };
 		D0C0C171A649307C89AF4394 /* Pods_HarmonyFestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61C15FAA5164C64700521B /* Pods_HarmonyFestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1937F7B22AD831AB00A4969D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1937F7992AD831A700A4969D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1937F7A02AD831A800A4969D;
-			remoteInfo = HarmonyFest;
-		};
-		1937F7BC2AD831AB00A4969D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1937F7992AD831A700A4969D /* Project object */;
 			proxyType = 1;
@@ -62,11 +62,7 @@
 		1937F7A42AD831A800A4969D /* HarmonyFestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestApp.swift; sourceTree = "<group>"; };
 		1937F7A82AD831AB00A4969D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1937F7B12AD831AB00A4969D /* HarmonyFestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonyFestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1937F7B52AD831AB00A4969D /* HarmonyFestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestTests.swift; sourceTree = "<group>"; };
-		1937F7BB2AD831AB00A4969D /* HarmonyFestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarmonyFestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1937F7BF2AD831AB00A4969D /* HarmonyFestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestUITests.swift; sourceTree = "<group>"; };
-		1937F7C12AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyFestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1975DE6B2AD83C0C0024C3DC /* JsonClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonClient.swift; sourceTree = "<group>"; };
+		1975DE6B2AD83C0C0024C3DC /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1975DE6D2AD83C860024C3DC /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		1975DE6F2AD83D450024C3DC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1975DE742AD840C00024C3DC /* ImageAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAsset.xcassets; sourceTree = "<group>"; };
@@ -91,6 +87,18 @@
 		1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterItemView.swift; sourceTree = "<group>"; };
 		1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceListView.swift; sourceTree = "<group>"; };
+		1975DEAD2AD9AEB60024C3DC /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		1975DEAF2AD9B5140024C3DC /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		1975DEB12AD9B5EC0024C3DC /* PerformanceListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceListItemView.swift; sourceTree = "<group>"; };
+		1975DEB32AD9B8770024C3DC /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		1975DEB62AD9BA9A0024C3DC /* screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen1.png; sourceTree = "<group>"; };
+		1975DEB72AD9BA9A0024C3DC /* screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen2.png; sourceTree = "<group>"; };
+		1975DEB82AD9BA9A0024C3DC /* screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen3.png; sourceTree = "<group>"; };
+		1975DEBD2AD9BC660024C3DC /* MasterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModelTests.swift; sourceTree = "<group>"; };
+		1975DEBF2AD9BEC20024C3DC /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		1975DEC32AD9BFB50024C3DC /* ArtistMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMock.swift; sourceTree = "<group>"; };
+		1975DEC52AD9CB520024C3DC /* NetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientMock.swift; sourceTree = "<group>"; };
+		1975DEC72AD9D39F0024C3DC /* HarmonyFestTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HarmonyFestTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		6F6542611EA9A824FCFF591E /* Pods-HarmonyFestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.release.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.release.xcconfig"; sourceTree = "<group>"; };
 		783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8177C169E758B0C5CDE31E61 /* Pods-HarmonyFestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,26 +127,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1937F7B82AD831AB00A4969D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1937F7982AD831A700A4969D = {
 			isa = PBXGroup;
 			children = (
+				1975DEB52AD9B8C60024C3DC /* Screenshot */,
 				1937F7A32AD831A800A4969D /* HarmonyFest */,
 				1937F7B42AD831AB00A4969D /* HarmonyFestTests */,
-				1937F7BE2AD831AB00A4969D /* HarmonyFestUITests */,
 				1937F7A22AD831A800A4969D /* Products */,
 				A1430FCB50CC4529522C149E /* Pods */,
 				E0B9BA56226258C23BC7D85C /* Frameworks */,
+				1975DEB32AD9B8770024C3DC /* Readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +148,6 @@
 			children = (
 				1937F7A12AD831A800A4969D /* HarmonyFest.app */,
 				1937F7B12AD831AB00A4969D /* HarmonyFestTests.xctest */,
-				1937F7BB2AD831AB00A4969D /* HarmonyFestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,18 +170,12 @@
 		1937F7B42AD831AB00A4969D /* HarmonyFestTests */ = {
 			isa = PBXGroup;
 			children = (
-				1937F7B52AD831AB00A4969D /* HarmonyFestTests.swift */,
+				1975DEC72AD9D39F0024C3DC /* HarmonyFestTests-Bridging-Header.h */,
+				1975DEC22AD9BF940024C3DC /* MockModels */,
+				1975DEBD2AD9BC660024C3DC /* MasterViewModelTests.swift */,
+				1975DEBF2AD9BEC20024C3DC /* DetailViewModelTests.swift */,
 			);
 			path = HarmonyFestTests;
-			sourceTree = "<group>";
-		};
-		1937F7BE2AD831AB00A4969D /* HarmonyFestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1937F7BF2AD831AB00A4969D /* HarmonyFestUITests.swift */,
-				1937F7C12AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift */,
-			);
-			path = HarmonyFestUITests;
 			sourceTree = "<group>";
 		};
 		1975DE612AD83A840024C3DC /* Resource */ = {
@@ -273,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				1975DE922AD864410024C3DC /* String.swift */,
+				1975DEAD2AD9AEB60024C3DC /* Array.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -290,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				1975DE982AD86C2C0024C3DC /* RoundedCornerView.swift */,
+				1975DEAF2AD9B5140024C3DC /* CircularProgressView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -297,7 +293,7 @@
 		1975DEA02AD891610024C3DC /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				1975DE6B2AD83C0C0024C3DC /* JsonClient.swift */,
+				1975DE6B2AD83C0C0024C3DC /* Network.swift */,
 				1975DE6D2AD83C860024C3DC /* EndPoint.swift */,
 				1975DE6F2AD83D450024C3DC /* Result.swift */,
 			);
@@ -318,8 +314,28 @@
 			children = (
 				1975DE942AD864B70024C3DC /* DetailView.swift */,
 				1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */,
+				1975DEB12AD9B5EC0024C3DC /* PerformanceListItemView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		1975DEB52AD9B8C60024C3DC /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				1975DEB62AD9BA9A0024C3DC /* screen1.png */,
+				1975DEB72AD9BA9A0024C3DC /* screen2.png */,
+				1975DEB82AD9BA9A0024C3DC /* screen3.png */,
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
+		1975DEC22AD9BF940024C3DC /* MockModels */ = {
+			isa = PBXGroup;
+			children = (
+				1975DEC32AD9BFB50024C3DC /* ArtistMock.swift */,
+				1975DEC52AD9CB520024C3DC /* NetworkClientMock.swift */,
+			);
+			path = MockModels;
 			sourceTree = "<group>";
 		};
 		A1430FCB50CC4529522C149E /* Pods */ = {
@@ -386,26 +402,6 @@
 			productReference = 1937F7B12AD831AB00A4969D /* HarmonyFestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1937F7BA2AD831AB00A4969D /* HarmonyFestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1937F7CB2AD831AB00A4969D /* Build configuration list for PBXNativeTarget "HarmonyFestUITests" */;
-			buildPhases = (
-				3F7721137093D4C0AB88EA0F /* [CP] Check Pods Manifest.lock */,
-				1937F7B72AD831AB00A4969D /* Sources */,
-				1937F7B82AD831AB00A4969D /* Frameworks */,
-				1937F7B92AD831AB00A4969D /* Resources */,
-				EB5E51C36C7D77E10FD962C7 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1937F7BD2AD831AB00A4969D /* PBXTargetDependency */,
-			);
-			name = HarmonyFestUITests;
-			productName = HarmonyFestUITests;
-			productReference = 1937F7BB2AD831AB00A4969D /* HarmonyFestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -421,10 +417,7 @@
 					};
 					1937F7B02AD831AB00A4969D = {
 						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 1937F7A02AD831A800A4969D;
-					};
-					1937F7BA2AD831AB00A4969D = {
-						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 1937F7A02AD831A800A4969D;
 					};
 				};
@@ -445,7 +438,6 @@
 			targets = (
 				1937F7A02AD831A800A4969D /* HarmonyFest */,
 				1937F7B02AD831AB00A4969D /* HarmonyFestTests */,
-				1937F7BA2AD831AB00A4969D /* HarmonyFestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -455,21 +447,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1975DEB42AD9B8770024C3DC /* Readme.md in Resources */,
+				1975DEBB2AD9BA9A0024C3DC /* screen3.png in Resources */,
+				1975DEB92AD9BA9A0024C3DC /* screen1.png in Resources */,
 				1975DE812AD8412A0024C3DC /* ColorAsset.xcassets in Resources */,
 				1975DE882AD844C60024C3DC /* Base.strings in Resources */,
+				1975DEBA2AD9BA9A0024C3DC /* screen2.png in Resources */,
 				1937F7A92AD831AB00A4969D /* Assets.xcassets in Resources */,
 				1975DE752AD840C00024C3DC /* ImageAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1937F7AF2AD831AB00A4969D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1937F7B92AD831AB00A4969D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,28 +485,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HarmonyFest/Pods-HarmonyFest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F7721137093D4C0AB88EA0F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HarmonyFest-HarmonyFestUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		40928ACD33910B6C5B697CC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,23 +505,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB5E51C36C7D77E10FD962C7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED490CEE86FE2AEFB1734189 /* [CP] Check Pods Manifest.lock */ = {
@@ -593,16 +543,19 @@
 				1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */,
 				1975DE932AD864410024C3DC /* String.swift in Sources */,
 				1975DE6E2AD83C860024C3DC /* EndPoint.swift in Sources */,
-				1975DE6C2AD83C0C0024C3DC /* JsonClient.swift in Sources */,
+				1975DE6C2AD83C0C0024C3DC /* Network.swift in Sources */,
 				1975DEA62AD8AA8A0024C3DC /* MasterItemView.swift in Sources */,
+				1975DEB22AD9B5EC0024C3DC /* PerformanceListItemView.swift in Sources */,
 				1975DE992AD86C2C0024C3DC /* RoundedCornerView.swift in Sources */,
 				1975DE8E2AD8517D0024C3DC /* MasterView.swift in Sources */,
 				1975DE7B2AD841020024C3DC /* TextReference.swift in Sources */,
 				1975DE9F2AD86FF00024C3DC /* Venue.swift in Sources */,
+				1975DEB02AD9B5140024C3DC /* CircularProgressView.swift in Sources */,
 				1975DEA42AD893E70024C3DC /* MasterViewModel.swift in Sources */,
 				1975DE702AD83D450024C3DC /* Result.swift in Sources */,
 				1975DEA22AD891910024C3DC /* HarmonyFestEndPoint.swift in Sources */,
 				1975DE7F2AD8411D0024C3DC /* ColorReference.swift in Sources */,
+				1975DEAE2AD9AEB60024C3DC /* Array.swift in Sources */,
 				1975DE9D2AD86F400024C3DC /* Entity.swift in Sources */,
 				1937F7A52AD831A800A4969D /* HarmonyFestApp.swift in Sources */,
 				1975DE902AD85A400024C3DC /* Artist.swift in Sources */,
@@ -614,16 +567,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1937F7B62AD831AB00A4969D /* HarmonyFestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1937F7B72AD831AB00A4969D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1937F7C02AD831AB00A4969D /* HarmonyFestUITests.swift in Sources */,
-				1937F7C22AD831AB00A4969D /* HarmonyFestUITestsLaunchTests.swift in Sources */,
+				1975DEBE2AD9BC660024C3DC /* MasterViewModelTests.swift in Sources */,
+				1975DEC62AD9CB520024C3DC /* NetworkClientMock.swift in Sources */,
+				1975DEC42AD9BFB50024C3DC /* ArtistMock.swift in Sources */,
+				1975DEC02AD9BEC20024C3DC /* DetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,11 +581,6 @@
 			isa = PBXTargetDependency;
 			target = 1937F7A02AD831A800A4969D /* HarmonyFest */;
 			targetProxy = 1937F7B22AD831AB00A4969D /* PBXContainerItemProxy */;
-		};
-		1937F7BD2AD831AB00A4969D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1937F7A02AD831A800A4969D /* HarmonyFest */;
-			targetProxy = 1937F7BC2AD831AB00A4969D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -839,15 +781,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96EWZNS6N9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.HarmonyFestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "HarmonyFestTests/HarmonyFestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarmonyFest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HarmonyFest";
@@ -860,56 +810,25 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96EWZNS6N9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.HarmonyFestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "HarmonyFestTests/HarmonyFestTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarmonyFest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HarmonyFest";
-			};
-			name = Release;
-		};
-		1937F7CC2AD831AB00A4969D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96EWZNS6N9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.HarmonyFestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HarmonyFest;
-			};
-			name = Debug;
-		};
-		1937F7CD2AD831AB00A4969D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0B5FA954911B940A0DB071A /* Pods-HarmonyFest-HarmonyFestUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96EWZNS6N9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.HarmonyFestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HarmonyFest;
 			};
 			name = Release;
 		};
@@ -939,15 +858,6 @@
 			buildConfigurations = (
 				1937F7C92AD831AB00A4969D /* Debug */,
 				1937F7CA2AD831AB00A4969D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1937F7CB2AD831AB00A4969D /* Build configuration list for PBXNativeTarget "HarmonyFestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1937F7CC2AD831AB00A4969D /* Debug */,
-				1937F7CD2AD831AB00A4969D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

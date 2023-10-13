@@ -12,17 +12,23 @@ import struct Kingfisher.DownsamplingImageProcessor
 
 struct DetailView: View {
     
-    @ObservedObject var vm = DetailViewModel()
-    
+    @ObservedObject var vm : DetailViewModel
+
+    let imageDownsampler = DownsamplingImageProcessor(size: .init(width: 256, height: 256))
+        
     let artistItem: Artist?
     let venueItem: Venue?
     
-    init(artistItem: Artist) {
+    init(networkClient: NetworkProtocol, artistItem: Artist) {
+        
+        self.vm = .init(networkClient: networkClient)
         self.venueItem = nil
         self.artistItem = artistItem
     }
     
-    init(venueItem: Venue) {
+    init(networkClient: NetworkClient, venueItem: Venue) {
+        
+        self.vm = .init(networkClient: networkClient)
         self.artistItem = nil
         self.venueItem = venueItem
     }
@@ -38,8 +44,8 @@ struct DetailView: View {
                 
                 ZStack(alignment: .bottom) {
                     
-                    KFImage((artistItem != nil ? artistItem : venueItem)?.image,
-                            options: [.processor(DownsamplingImageProcessor(size: .init(width: 256, height: 256)))])
+                    KFImage((artistItem != nil ? artistItem?.image : venueItem?.image),
+                            options: [.processor(imageDownsampler)])
                     .resizable()
                     .aspectRatio(CGSize(width: 256, height: 150), contentMode: .fit)
                     .cornerRadius(8)
@@ -56,20 +62,25 @@ struct DetailView: View {
                 
             }
             .padding(.top, 20)
-            .navigationBarTitle((artistItem != nil ? artistItem : venueItem)?.name ?? "", displayMode: .large)
+            .navigationBarTitle((artistItem != nil ? artistItem?.name : venueItem?.name) ?? "", displayMode: .large)
             
         }
         .onAppear{
             
-            if self.artistItem != nil {
-                self.vm.getPerformances(artist: self.artistItem!)
-            }
-            else {
-                self.vm.getPerformances(venue: self.venueItem!)
-            }
-            
+            loadPerformanceData()
         }
         
+        
+    }
+    
+    private func loadPerformanceData() {
+        
+        if self.artistItem != nil {
+            self.vm.getPerformances(artist: self.artistItem!)
+        }
+        else {
+            self.vm.getPerformances(venue: self.venueItem!)
+        }
         
     }
 }

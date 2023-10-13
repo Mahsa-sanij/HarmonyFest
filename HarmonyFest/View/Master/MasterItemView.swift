@@ -9,16 +9,16 @@ import SwiftUI
 import struct Kingfisher.KFImage
 import struct Kingfisher.DownsamplingImageProcessor
 
-struct MasterItemView : View {
+struct MasterItemView: View {
     
-    let item : Entity
+    let item: Entity
+    let imageDownsampler = DownsamplingImageProcessor(size: .init(width: 256, height: 256))
     
-    var body: some View
-    {
+    var body: some View {
         HStack(spacing: 12) {
             
             KFImage(item.image,
-                    options: [.processor(DownsamplingImageProcessor(size: .init(width: 256, height: 256)))])
+                    options: [.processor(imageDownsampler)])
                 .placeholder({
                     ImageReference.placeholder.image
                 })

@@ -16,7 +16,7 @@ enum MasterDisplayMode: String, CaseIterable, Identifiable {
 
 class MasterViewModel: ObservableObject {
     
-    var cancellables = [AnyCancellable]()
+    let networkClient : NetworkProtocol
     
     @Published var selectionMode: MasterDisplayMode = .Artists
     @Published var artistList : [Artist]? = nil
@@ -24,7 +24,11 @@ class MasterViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var error : String? = nil
     
-    init() {
+    var cancellables = [AnyCancellable]()
+
+    init(networkClient: NetworkProtocol) {
+        
+        self.networkClient = networkClient
         
         $selectionMode
             .removeDuplicates()
@@ -43,7 +47,7 @@ class MasterViewModel: ObservableObject {
         
         self.isLoading = true
         
-        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getArtists, type: Artist.self)
+        networkClient.makeAPICall(to: HarmonyFestEndPoint.getArtists, type: Artist.self)
             .sink(receiveValue: { result in
                 
                 self.isLoading = false
@@ -57,9 +61,7 @@ class MasterViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.artistList = (result.data ?? []).sorted(by: {
-                        $0.name ?? "" < $1.name ?? ""
-                    })
+                    self.artistList = (result.data ?? []).sorted
 
                 }
                 
@@ -72,7 +74,7 @@ class MasterViewModel: ObservableObject {
         
         self.isLoading = true
         
-        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getVenues, type: Venue.self)
+        networkClient.makeAPICall(to: HarmonyFestEndPoint.getVenues, type: Venue.self)
             .sink(receiveValue: { result in
                 
                 self.isLoading = false
@@ -86,9 +88,7 @@ class MasterViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.venueList = (result.data ?? []).sorted(by: {
-                        $0.sortId ?? 0 < $1.sortId ?? 0
-                    })
+                    self.venueList = (result.data ?? []).sorted
 
                 }
                 

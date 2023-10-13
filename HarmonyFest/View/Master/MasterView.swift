@@ -9,13 +9,17 @@ import SwiftUI
 
 struct MasterView: View {
     
-    @ObservedObject var vm = MasterViewModel()
+    
+    private var networkClient : NetworkProtocol
+    @ObservedObject var vm : MasterViewModel
     
     
-    init() {
+    init(networkClient: NetworkProtocol) {
+        
+        self.networkClient = networkClient
+        self.vm = MasterViewModel(networkClient: networkClient)
         
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         
     }
@@ -40,15 +44,7 @@ struct MasterView: View {
                     
                     if vm.isLoading {
                         
-                        VStack {
-                            
-                            Spacer()
-                            
-                            ProgressView()
-                                .progressViewStyle(.circular)
-                            
-                            Spacer()
-                        }
+                        CircularProgressView()
                         
                     }
                     else if vm.error != nil {
@@ -68,7 +64,7 @@ struct MasterView: View {
                         {
                             List(vm.artistList ?? [], id: \.id) { item in
                                 
-                                NavigationLink(destination: DetailView(artistItem: item)) {
+                                NavigationLink(destination: DetailView(networkClient: networkClient , artistItem: item)) {
                                     
                                     MasterItemView(item: item)
                                         .listRowBackground(Color.clear)
@@ -81,7 +77,7 @@ struct MasterView: View {
                             
                             List(vm.venueList ?? [], id: \.id) { item in
                                 
-                                NavigationLink(destination: DetailView(venueItem: item)) {
+                                NavigationLink(destination: DetailView(networkClient: networkClient as! NetworkClient, venueItem: item)) {
                                     
                                     MasterItemView(item: item)
                                         .listRowBackground(Color.clear)
@@ -102,9 +98,3 @@ struct MasterView: View {
     }
 }
 
-
-struct MasterView_Previews: PreviewProvider {
-    static var previews: some View {
-        MasterView()
-    }
-}

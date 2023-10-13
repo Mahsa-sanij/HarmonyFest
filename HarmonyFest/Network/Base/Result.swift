@@ -13,7 +13,7 @@ enum Status {
     case Failure
 }
 
-public class Result<T : Decodable> : Error {
+public class Result<T: Decodable>: Error {
     
     var status: Status = .Success
     var data : [T]?

@@ -7,7 +7,7 @@
 
 import Alamofire
 
-enum HarmonyFestEndPoint : EndPoint {
+enum HarmonyFestEndPoint: EndPoint {
     
     case getArtists
     case getVenues

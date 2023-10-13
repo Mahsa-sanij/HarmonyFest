@@ -7,19 +7,10 @@
 
 import Foundation
 
-class Entity : Codable {
+protocol Entity: Codable {
     
-    var id: Int?
-    var name: String?
-    var image: URL? {
-        get {
-            return nil
-        }
-    }
-    
-    init(id: Int? = nil, name: String? = nil) {
-        self.id = id
-        self.name = name
-    }
-    
+    var id: Int?        { get }
+    var name: String?   { get }
+    var image: URL?     { get }
+
 }
