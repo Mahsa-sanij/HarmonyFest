@@ -5,6 +5,7 @@
 //  Created by Mahsa Sanij on 10/12/23.
 //
 
+import Foundation
 import Combine
 
 
@@ -17,11 +18,20 @@ class DetailViewModel: ObservableObject {
     @Published var error : String? = nil
     
     
-    func getPerformances(artistId: Int) {
+    func getPerformances(artist: Entity) {
         
         self.isLoading = true
         
-        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getArtistPerformances(id: artistId), type: Performance.self)
+        let from = Date()
+        let to = Calendar.current.date(byAdding: .day, value: 14, to: from)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        let fromDate = formatter.string(from: from)
+        let toDate = formatter.string(from: to!)
+        
+        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getArtistPerformances(id: artist.id ?? 0, from: fromDate, to: toDate), type: Performance.self)
             .sink(receiveValue: { result in
                 
                 self.isLoading = false
@@ -35,7 +45,9 @@ class DetailViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.performanceList = result.data ?? []
+                    self.performanceList = (result.data ?? []).sorted(by: {
+                        $0.date ?? "" < $1.date ?? ""
+                    })
 
                 }
                 
@@ -44,11 +56,20 @@ class DetailViewModel: ObservableObject {
         
     }
     
-    func getPerformances(venueId: Int) {
+    func getPerformances(venue: Entity) {
         
         self.isLoading = true
         
-        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getVenuePerformances(id: venueId), type: Performance.self)
+        let from = Date()
+        let to = Calendar.current.date(byAdding: .day, value: 14, to: from)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        let fromDate = formatter.string(from: from)
+        let toDate = formatter.string(from: to!)
+        
+        JSONClient.makeAPICall(to: HarmonyFestEndPoint.getVenuePerformances(id: venue.id ?? 0, from: fromDate, to: toDate), type: Performance.self)
             .sink(receiveValue: { result in
                 
                 self.isLoading = false
@@ -62,7 +83,9 @@ class DetailViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.performanceList = result.data ?? []
+                    self.performanceList = (result.data ?? []).sorted(by: {
+                        $0.date ?? "" < $1.date ?? ""
+                    })
 
                 }
                 
@@ -70,6 +93,5 @@ class DetailViewModel: ObservableObject {
             .store(in: &cancellables)
         
     }
-    
 }
 

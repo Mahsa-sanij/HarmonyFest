@@ -57,7 +57,9 @@ class MasterViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.artistList = result.data ?? []
+                    self.artistList = (result.data ?? []).sorted(by: {
+                        $0.name ?? "" < $1.name ?? ""
+                    })
 
                 }
                 
@@ -84,7 +86,9 @@ class MasterViewModel: ObservableObject {
                 case .Success:
                     
                     self.error = nil
-                    self.venueList = result.data ?? []
+                    self.venueList = (result.data ?? []).sorted(by: {
+                        $0.sortId ?? 0 < $1.sortId ?? 0
+                    })
 
                 }
                 

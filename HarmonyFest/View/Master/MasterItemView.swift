@@ -7,6 +7,7 @@
 
 import SwiftUI
 import struct Kingfisher.KFImage
+import struct Kingfisher.DownsamplingImageProcessor
 
 struct MasterItemView : View {
     
@@ -16,7 +17,11 @@ struct MasterItemView : View {
     {
         HStack(spacing: 12) {
             
-            KFImage(item.image)
+            KFImage(item.image,
+                    options: [.processor(DownsamplingImageProcessor(size: .init(width: 256, height: 256)))])
+                .placeholder({
+                    ImageReference.placeholder.image
+                })
                 .resizable()
                 .frame(width: 64, height: 64)
                 .cornerRadius(4)

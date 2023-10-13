@@ -34,6 +34,7 @@
 		1975DEA42AD893E70024C3DC /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA32AD893E70024C3DC /* MasterViewModel.swift */; };
 		1975DEA62AD8AA8A0024C3DC /* MasterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */; };
 		1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */; };
+		1975DEAC2AD8B1D30024C3DC /* PerformanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */; };
 		300EBDAA7F1EC978464E2B2A /* Pods_HarmonyFest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9651471475BAEC25EB8BB921 /* Pods_HarmonyFest.framework */; };
 		52BBA71498B5CDE3B662E3FA /* Pods_HarmonyFest_HarmonyFestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9782E440A0FF12ADC4E9F03D /* Pods_HarmonyFest_HarmonyFestUITests.framework */; };
 		D0C0C171A649307C89AF4394 /* Pods_HarmonyFestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61C15FAA5164C64700521B /* Pods_HarmonyFestTests.framework */; };
@@ -89,6 +90,7 @@
 		1975DEA32AD893E70024C3DC /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 		1975DEA52AD8AA8A0024C3DC /* MasterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterItemView.swift; sourceTree = "<group>"; };
 		1975DEA92AD8ACB90024C3DC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceListView.swift; sourceTree = "<group>"; };
 		6F6542611EA9A824FCFF591E /* Pods-HarmonyFestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.release.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.release.xcconfig"; sourceTree = "<group>"; };
 		783E18A0C036779DDB1E76B8 /* Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFest-HarmonyFestUITests/Pods-HarmonyFest-HarmonyFestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8177C169E758B0C5CDE31E61 /* Pods-HarmonyFestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarmonyFestTests.debug.xcconfig"; path = "Target Support Files/Pods-HarmonyFestTests/Pods-HarmonyFestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				1975DE942AD864B70024C3DC /* DetailView.swift */,
+				1975DEAB2AD8B1D30024C3DC /* PerformanceListView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			files = (
 				1975DE7D2AD8410D0024C3DC /* LanguageUtil.swift in Sources */,
 				1975DE952AD864B70024C3DC /* DetailView.swift in Sources */,
+				1975DEAC2AD8B1D30024C3DC /* PerformanceListView.swift in Sources */,
 				1975DE9B2AD86EC40024C3DC /* Performance.swift in Sources */,
 				1975DEAA2AD8ACB90024C3DC /* DetailViewModel.swift in Sources */,
 				1975DE932AD864410024C3DC /* String.swift in Sources */,

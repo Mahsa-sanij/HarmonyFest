@@ -11,8 +11,8 @@ enum HarmonyFestEndPoint : EndPoint {
     
     case getArtists
     case getVenues
-    case getArtistPerformances(id: Int)
-    case getVenuePerformances(id: Int)
+    case getArtistPerformances(id: Int, from:String, to: String)
+    case getVenuePerformances(id: Int, from:String, to: String)
     
     var baseUrl: String {
         return "http://ec2-44-211-66-223.compute-1.amazonaws.com/"
@@ -26,10 +26,10 @@ enum HarmonyFestEndPoint : EndPoint {
             return baseUrl + "artists"
         case .getVenues:
             return baseUrl + "venues"
-        case .getArtistPerformances(let id):
-            return baseUrl + "artists/\(id)/performances"
-        case .getVenuePerformances(let id):
-            return baseUrl + "venues/\(id)/performances"
+        case .getArtistPerformances(let id, let from, let to):
+            return baseUrl + "artists/\(id)/performances?from=\(from)&to=\(to)"
+        case .getVenuePerformances(let id, let from, let to):
+            return baseUrl + "venues/\(id)/performances?from=\(from)&to=\(to)"
         }
     }
     

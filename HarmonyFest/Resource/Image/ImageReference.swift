@@ -9,7 +9,7 @@ import SwiftUI
 
 enum ImageReference: String {
 
-    case banner  = "img_banner"
+    case placeholder  = "placeholder"
 }
 
 extension ImageReference {
